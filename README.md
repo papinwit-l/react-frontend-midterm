@@ -74,94 +74,139 @@ async function getMe() {
 
 - Section 1 (Part1-Part2) : ทำ App ได้
 - Section 2 (Part3 : Bonus) : ทำให้ App ทำงานได้ดี
-- Section 4 (Part4 : CleanCode) : ทำให้คนอื่นอยากทำงานด้วย (รวมถึงตัวเองในอนาคต)
-- Section 5 (Part5 : Instinct) : Applied Knowledge
+
 
 ## Part-1 : Project Setup and UI (50pts)
 
-### 1A : Project Setup (10pts)
+### 1A : Project Setup  การติดตั้งโปรเจกต์ (10 คะแนน)
 
-- [x] Create Project with Create React App or ViteJs
+	  	สร้างโปรเจกต์ด้วย Create React App หรือ ViteJs
+- [x] Create Project with Create React App or ViteJs 
+
+		  ล้างไฟล์และโค้ดที่ไม่ได้ใช้ออก
 - [ ] Clean up unused files and code
+
+		  ติดตั้ง dependencies หรือแพ็กเกจที่ต้องใช้ในโปรเจกต์
 - [ ] Install dependencies or packages that you need for this project
-- [ ] Pick some CSS Framework and Install eg. Bootstrap, Tailwind, Scss, Vanilla css, MUI or daisyui
+
+	  	เลือกและติดตั้งเฟรมเวิร์ก CSS เช่น Bootstrap, Tailwind, Scss, Vanilla CSS หรือ MUI  
+- [ ] Pick some CSS Framework and Install eg. Bootstrap, Tailwind, Scss, Vanilla css or MUI
+
+      จัดโครงสร้างโฟลเดอร์ให้เป็นระเบียบเรียบร้อย
 - [ ] Setup Well-organized Folder Structure
+
+	    ใช้ Git และ GitHub สำหรับระบบควบคุมเวอร์ชัน
 - [ ] Using Git and Github for Version Control System
+
+    	ใช้ Command Line ในการรันโปรเจกต์
 - [ ] Using Comand Line for run project
 
-### 1B : Build UI with React Component (20pts)
+### 1B : Build UI with React Component สร้าง UI ด้วย React Component (20 คะแนน)
 
+      เข้าใจการออกแบบ UI และ Flow ของ UI (Figma)
 - [ ] Understand UI Design and UI Flow (Figma)
+
+      เขียน UI ที่สะอาดและนำกลับมาใช้ซ้ำได้
 - [ ] Write Clean & Reausable UI
+
+      ตั้งชื่อ component ให้เหมาะสม
 - [ ] Good Naming for Component
-- [ ] Manage UI state appropriately
 
 ### 1C : Precise UI with Design (20pts)
 
+      สร้าง UI ที่ถูกต้อง: หน้า Login
 - [ ] Precise UI : Login Page
-- [ ] Precise UI : Todo Page
 
-## Part-2 : Feature and Logic (50pts)
+      สร้าง UI ที่ถูกต้อง: หน้า Todo หรือ movie
+- [ ] Precise UI : Todo Page หรือ movie
 
-### 2A : Auth and Login (15pts)
+## Part-2 : Feature and Logic ฟีเจอร์และลอจิก (50 คะแนน)
 
+### 2A : Auth and Login การยืนยันตัวตนและเข้าสู่ระบบ (15 คะแนน)
+
+      เข้าสู่ระบบด้วยอีเมลและรหัสผ่าน
 - [ ] Login with email and password
+
+      สามารถส่งแบบฟอร์มด้วยปุ่ม Enter หรือปุ่ม
 - [ ] Can submit form with Enter key or Button
+
+      ใช้การจัดการสถานะสำหรับหน้า Login
 - [ ] Implement State Management for Login Page
-- [ ] Connect to API or JSON SERVER
+
+      เชื่อมต่อกับ API
+- [ ] Connect to API
+
+      สามารถเข้าสู่ระบบได้
 - [ ] Can Login
 
 ### 2B : List Manipulate (35pts)
 
+      แสดงรายการเมื่อหน้าเรนเดอร์ (จัดการสถานะ & API)
 - [ ] Show List when Render Page (State Management & API)
+
+      สามารถสร้างรายการใหม่ (จัดการสถานะ & API)
 - [ ] Can Create List item (State Management & API)
+
+      สามารถอัปเดตรายการ (จัดการสถานะ & API)
 - [ ] Can Update List item (State Management & API)
+
+      สามารถลบรายการ (จัดการสถานะ & API)
 - [ ] Can Delete List item (State Management & API)
+
+      สามารถออกจากระบบ (จัดการสถานะ & API)
 - [ ] Can Logout (State Management & API)
 
-#### suggestion
+#### suggestion คำแนะนำ
 
+  หากคุณไม่สามารถเรียก API ได้ สามารถจำลองข้อมูลในโปรเจกต์ คุณจะได้ครึ่งคะแนน
 - If you can't call API, you can mock data in your project. you will get half point.
+
+  หากคุณไม่สามารถเข้าสู่ระบบได้ สามารถจำลองชื่อและนามสกุลเพื่อส่งไปยัง API
 - If yon can't login, you can mock you firstname and lastname. for send to API.
 
-## Part-3 : Bonus (0-100pts)
+## Part-3 : Bonus โบนัส 
 
+      ใช้การตรวจสอบความถูกต้องในหน้า Login (10 คะแนน)
 - [ ] Implement Validation in Login Page (10pts)
-- [ ] Implement Validation in Todo Page (10pts)
+
+      ใช้การตรวจสอบความถูกต้องในหน้า Todo หรือ movie (10 คะแนน)
+- [ ] Implement Validation in Todo Page or movie (10pts)
+
+      เพิ่มฟีเจอร์การสมัครและหน้า Register (20 คะแนน)
 - [ ] Feature Register and Register Page(20pts)
-- [ ] Using Context API for State Management (20pts)
+
+      ใช้ Context หรือ zustand สำหรับการจัดการสถานะ (20 คะแนน)
+- [ ] Using Context or zustand for State Management (20pts)
+
+      ใช้ React Router สำหรับการ routing (10 คะแนน)
 - [ ] Using React Router for Routing (10pts)
+
+      เพิ่มฟีเจอร์ใหม่หรือ UI ที่น่าทึ่ง (ขึ้นอยู่กับความคิดสร้างสรรค์) (15 คะแนน)
 - [ ] New Feature or Amazing UI (Depend on your creativity) (15pts)
-- [ ] Deploy to Vercel or Netlify (15pts) -try to research
+
+      เพิ่มฟีเจอร์ใหม่หรือ UI ที่น่าทึ่ง (ขึ้นอยู่กับความคิดสร้างสรรค์) (15 คะแนน)
+- [ ] Deploy to Vercel or Netlify (15pts)
 - paste your link here
 
-## Part-4 : Become Extraordinary Developer (100pts)
+      ป้องกันการเข้าถึงหน้าโดยไม่ได้รับอนุญาต (10 คะแนน)
+- [ ] Protect Routed (10pts)
 
-### Clean Code
+      การเปลี่ยนหน้าอัตโนมัติ (login logout) (10 คะแนน)
+- [ ] Auto Redirect  (10 pts)
 
-- [ ] DRY (Don't Repeat Yourself)
-- [ ] SOLID (S : Single Responsibility Principle)
-- [ ] Avoid Big Component
-- [ ] Avoid Magic Value (Hard Code)
-- [ ] Readable Code
-- [ ] Good Naming for Variable, Function, Component, etc.
-- [ ] Good Commenting
-- [ ] Implement React Design Pattern and Avoid Anti Pattern
-- [ ] Use Async Await instead of Promise then catch
-- [ ] Well-organized Folder Structure
-- [ ] Well-organized Git Commit Message
-
-## Part-5 : Instinct (50pts)
-
-- [ ] Protect Routed
-- [ ] Auto Redirect or Login  
-       Hint : using Local storage for token
-
-Happy Coding ...!!
+      ใช้  API v2 หรือ v3 (CRUD) (20 คะแนน)
+- [ ] use  API v2 or v3 (CRUD) (20 pts)
 
 # Can and Can't
 
+  เปิด Slide, Docs, StackOverflow, Google ได้
 - Open Slide , Docs , StackOverflow , Google
+
+  ห้ามใช้ AI, ห้าม Copy, ห้ามโกง
 - Don't AI , Don't Copy , Don't Cheat
+
+  ห้ามใช้โค้ดจากโปรเจกต์อื่น (COPY PASTE)
 - Don't use other code from other project (COPY PASTE)
+
+  คุณสามารถถามเพื่อหารือได้ (ไม่ใช่ขอคำตอบ)
 - You can asking for discussion (not solution)
