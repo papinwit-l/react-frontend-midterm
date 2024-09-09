@@ -80,25 +80,25 @@ async function getMe() {
 
 ### 1A : Project Setup  การติดตั้งโปรเจกต์ (10 คะแนน)
 
-	  	สร้างโปรเจกต์ด้วย Create React App หรือ ViteJs
+      สร้างโปรเจกต์ด้วย Create React App หรือ ViteJs
 - [x] Create Project with Create React App or ViteJs 
 
-		  ล้างไฟล์และโค้ดที่ไม่ได้ใช้ออก
+      ล้างไฟล์และโค้ดที่ไม่ได้ใช้ออก
 - [ ] Clean up unused files and code
 
-		  ติดตั้ง dependencies หรือแพ็กเกจที่ต้องใช้ในโปรเจกต์
+      ติดตั้ง dependencies หรือแพ็กเกจที่ต้องใช้ในโปรเจกต์
 - [ ] Install dependencies or packages that you need for this project
 
-	  	เลือกและติดตั้งเฟรมเวิร์ก CSS เช่น Bootstrap, Tailwind, Scss, Vanilla CSS หรือ MUI  
+      เลือกและติดตั้งเฟรมเวิร์ก CSS เช่น Bootstrap, Tailwind, Scss, Vanilla CSS หรือ MUI  
 - [ ] Pick some CSS Framework and Install eg. Bootstrap, Tailwind, Scss, Vanilla css or MUI
 
       จัดโครงสร้างโฟลเดอร์ให้เป็นระเบียบเรียบร้อย
 - [ ] Setup Well-organized Folder Structure
 
-	    ใช้ Git และ GitHub สำหรับระบบควบคุมเวอร์ชัน
+      ใช้ Git และ GitHub สำหรับระบบควบคุมเวอร์ชัน
 - [ ] Using Git and Github for Version Control System
 
-    	ใช้ Command Line ในการรันโปรเจกต์
+      ใช้ Command Line ในการรันโปรเจกต์
 - [ ] Using Comand Line for run project
 
 ### 1B : Build UI with React Component สร้าง UI ด้วย React Component (20 คะแนน)
@@ -117,8 +117,8 @@ async function getMe() {
       สร้าง UI ที่ถูกต้อง: หน้า Login
 - [ ] Precise UI : Login Page
 
-      สร้าง UI ที่ถูกต้อง: หน้า Todo หรือ movie
-- [ ] Precise UI : Todo Page หรือ movie
+      สร้าง UI ที่ถูกต้อง: หน้า Todo หรือ movie (My Favorite List)
+- [ ] Precise UI : Todo Page or movie (My Favorite List)
 
 ## Part-2 : Feature and Logic ฟีเจอร์และลอจิก (50 คะแนน)
 
@@ -127,8 +127,8 @@ async function getMe() {
       เข้าสู่ระบบด้วยอีเมลและรหัสผ่าน
 - [ ] Login with email and password
 
-      สามารถส่งแบบฟอร์มด้วยปุ่ม Enter หรือปุ่ม
-- [ ] Can submit form with Enter key or Button
+      สามารถส่งแบบฟอร์มด้วยปุ่ม Enter หรือปุ่ม 
+- [ ] Can submit form with Enter key or Button 
 
       ใช้การจัดการสถานะสำหรับหน้า Login
 - [ ] Implement State Management for Login Page
@@ -169,9 +169,6 @@ async function getMe() {
       ใช้การตรวจสอบความถูกต้องในหน้า Login (10 คะแนน)
 - [ ] Implement Validation in Login Page (10pts)
 
-      ใช้การตรวจสอบความถูกต้องในหน้า Todo หรือ movie (10 คะแนน)
-- [ ] Implement Validation in Todo Page or movie (10pts)
-
       เพิ่มฟีเจอร์การสมัครและหน้า Register (20 คะแนน)
 - [ ] Feature Register and Register Page(20pts)
 
@@ -184,18 +181,27 @@ async function getMe() {
       เพิ่มฟีเจอร์ใหม่หรือ UI ที่น่าทึ่ง (ขึ้นอยู่กับความคิดสร้างสรรค์) (15 คะแนน)
 - [ ] New Feature or Amazing UI (Depend on your creativity) (15pts)
 
-      เพิ่มฟีเจอร์ใหม่หรือ UI ที่น่าทึ่ง (ขึ้นอยู่กับความคิดสร้างสรรค์) (15 คะแนน)
-- [ ] Deploy to Vercel or Netlify (15pts)
-- paste your link here
-
       ป้องกันการเข้าถึงหน้าโดยไม่ได้รับอนุญาต (10 คะแนน)
 - [ ] Protect Routed (10pts)
 
       การเปลี่ยนหน้าอัตโนมัติ (login logout) (10 คะแนน)
 - [ ] Auto Redirect  (10 pts)
 
-      ใช้  API v2 หรือ v3 (CRUD) (20 คะแนน)
-- [ ] use  API v2 or v3 (CRUD) (20 pts)
+      ใช้  API v2 หรือ v3 (C.R.U.D.) (20 คะแนน)
+- [ ] use  API v2 or v3 (C.R.U.D.) (20 pts)
+
+      ใช้  moviesAPI (TIDB,OMDB) (20 คะแนน)
+- [ ] use  moviesAPI (TIDB,OMDB) (20 pts)
+
+      สร้าง Movie detail page  (20 คะแนน) (สำหรับ v3)
+- [ ] Completed Movie detail page  (20 pts) (for v3)
+
+      สร้าง Movie list page  (20 คะแนน) (สำหรับ v3)
+- [ ] Completed Movie list page  (20 pts) (for v3)
+      
+- [ ] Deploy to Vercel or Netlify (15pts)
+- paste your link here
+ 
 
 # Can and Can't
 
