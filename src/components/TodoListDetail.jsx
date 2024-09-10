@@ -1,8 +1,15 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
+import useStore from "../store/myStore";
 
 function TodoListDetail(props) {
+  const { activeUser } = useStore();
   const { data, fetchList } = props;
+  const [isEdit, setIsEdit] = useState(false);
+  const [text, setText] = useState("");
+  const labelStyleLine = "flex flex-1 line-through gap-2 p-1";
+  const labelStyle = "flex flex-1 gap-2 p-1";
+  const checkboxStyle = "toggle toggle-info toggle-sm";
 
   const hdlDelete = async () => {
     let resp;
@@ -38,39 +45,103 @@ function TodoListDetail(props) {
     hdlUpdate(!data.status);
   };
 
+  const hdlEdit = (e) => {
+    e.preventDefault();
+    setText(data.title);
+    setIsEdit(true);
+  };
+
+  const postList = async () => {
+    // console.log("post");
+    let resp;
+    try {
+      resp = await axios.patch("http://139.5.146.186/api/v1/todo/" + data.id, {
+        title: text,
+      });
+      //   console.log(resp.data);
+      fetchList();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const hdlEnter = (e) => {
+    if (e.key === "Enter") {
+      console.log(text);
+      postList();
+      setIsEdit(false);
+    }
+  };
+
+  const hdlCancelEdit = (e) => {
+    e, preventDefault();
+    setIsEdit(false);
+  };
+
+  const inputChange = (e) => {
+    setText(e.target.value);
+  };
   return (
     <div className="flex justify-between p-1 border rounded-md border-slate-700">
-      {data.status ? (
-        <label
-          className="flex flex-1 line-through gap-2 p-1"
-          onClick={hdlStatus}
-        >
+      {isEdit ? (
+        <label className={labelStyle}>
           <input
             type="checkbox"
             checked={data.status}
-            className="toggle toggle-info toggle-sm"
+            className={checkboxStyle}
+            onClick={hdlStatus}
+          />
+          <input
+            type="text"
+            value={text}
+            onChange={inputChange}
+            onKeyUp={hdlEnter}
+          />
+        </label>
+      ) : data.status ? (
+        <label className={labelStyleLine}>
+          <input
+            type="checkbox"
+            checked={data.status}
+            className={checkboxStyle}
+            onClick={hdlStatus}
           />
           {data.title}
         </label>
       ) : (
-        <label
-          className="flex flex-1 line-through gap-2 p-1"
-          onClick={hdlStatus}
-        >
+        <label className={labelStyle}>
           <input
             type="checkbox"
             checked={data.status}
-            className="toggle toggle-info toggle-sm"
+            className={checkboxStyle}
+            onClick={hdlStatus}
           />
           {data.title}
         </label>
+      )}
+      {isEdit ? (
+        <a
+          href=""
+          onClick={hdlCancelEdit}
+          className="pr-2 flex justify-center items-center"
+        >
+          Cancel
+        </a>
+      ) : (
+        <a
+          href=""
+          onClick={hdlEdit}
+          className="pr-2 flex justify-center items-center"
+        >
+          <i className="fa-solid fa-pen-to-square"></i>
+        </a>
       )}
       <a
         href=""
         onClick={hdlClick}
         className="pr-2 flex justify-center items-center"
       >
-        <i class="fa-solid fa-delete-left text-slate-800"></i>
+        <i className="fa-solid fa-delete-left text-slate-800"></i>
       </a>
     </div>
   );
