@@ -142,45 +142,45 @@ async function getMe() {
 
       เข้าสู่ระบบด้วยอีเมลและรหัสผ่าน
 
-- [ ] Login with email and password
+- [x] Login with email and password
 
       สามารถส่งแบบฟอร์มด้วยปุ่ม Enter หรือปุ่ม
 
-- [ ] Can submit form with Enter key or Button
+- [x] Can submit form with Enter key or Button
 
       ใช้การจัดการสถานะสำหรับหน้า Login
 
-- [ ] Implement State Management for Login Page
+- [x] Implement State Management for Login Page
 
       เชื่อมต่อกับ API
 
-- [ ] Connect to API
+- [x] Connect to API
 
       สามารถเข้าสู่ระบบได้
 
-- [ ] Can Login
+- [x] Can Login
 
 ### 2B : List Manipulate (35pts)
 
       แสดงรายการเมื่อหน้าเรนเดอร์ (จัดการสถานะ & API)
 
-- [ ] Show List when Render Page (State Management & API)
+- [x] Show List when Render Page (State Management & API)
 
       สามารถสร้างรายการใหม่ (จัดการสถานะ & API)
 
-- [ ] Can Create List item (State Management & API)
+- [x] Can Create List item (State Management & API)
 
       สามารถอัปเดตรายการ (จัดการสถานะ & API)
 
-- [ ] Can Update List item (State Management & API)
+- [x] Can Update List item (State Management & API)
 
       สามารถลบรายการ (จัดการสถานะ & API)
 
-- [ ] Can Delete List item (State Management & API)
+- [x] Can Delete List item (State Management & API)
 
       สามารถออกจากระบบ (จัดการสถานะ & API)
 
-- [ ] Can Logout (State Management & API)
+- [x] Can Logout (State Management & API)
 
 #### suggestion คำแนะนำ
 
@@ -196,7 +196,7 @@ async function getMe() {
 
       ใช้การตรวจสอบความถูกต้องในหน้า Login (10 คะแนน)
 
-- [ ] Implement Validation in Login Page (10pts)
+- [x] Implement Validation in Login Page (10pts)
 
       เพิ่มฟีเจอร์การสมัครและหน้า Register (20 คะแนน)
 
