@@ -73,7 +73,8 @@ function TodoList() {
 
   return (
     <div className="flex">
-      <div className="card bg-base-200 mx-auto mt-6 p-6 gap-2 select-none">
+      <div className="card bg-base-200 mx-auto mt-6 p-6 gap-4 select-none">
+        <h1 className="font-bold">Welcome, {activeUser.user.fullName}</h1>
         <label className="input input-bordered flex items-center gap-2">
           New Task
           <input

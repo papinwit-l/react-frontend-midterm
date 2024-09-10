@@ -82,7 +82,7 @@ function TodoListDetail(props) {
     setText(e.target.value);
   };
   return (
-    <div className="flex justify-between items-center p-1 gap-1 border rounded-md border-slate-700">
+    <div className="flex justify-between items-center p-1 gap-1 border rounded-md border-slate-700 hover:bg-base-100">
       {isEdit ? (
         <label className={labelStyle}>
           <input
@@ -96,6 +96,7 @@ function TodoListDetail(props) {
             value={text}
             onChange={inputChange}
             onKeyUp={hdlEnter}
+            className="border p-[2px]"
           />
         </label>
       ) : data.status ? (
