@@ -90,27 +90,27 @@ async function getMe() {
 
       ล้างไฟล์และโค้ดที่ไม่ได้ใช้ออก
 
-- [ ] Clean up unused files and code
+- [x] Clean up unused files and code
 
       ติดตั้ง dependencies หรือแพ็กเกจที่ต้องใช้ในโปรเจกต์
 
-- [ ] Install dependencies or packages that you need for this project
+- [x] Install dependencies or packages that you need for this project
 
       เลือกและติดตั้งเฟรมเวิร์ก CSS เช่น Bootstrap, Tailwind, Scss, Vanilla CSS หรือ MUI
 
-- [ ] Pick some CSS Framework and Install eg. Bootstrap, Tailwind, Scss, Vanilla css or MUI
+- [x] Pick some CSS Framework and Install eg. Bootstrap, Tailwind, Scss, Vanilla css or MUI
 
       จัดโครงสร้างโฟลเดอร์ให้เป็นระเบียบเรียบร้อย
 
-- [ ] Setup Well-organized Folder Structure
+- [x] Setup Well-organized Folder Structure
 
       ใช้ Git และ GitHub สำหรับระบบควบคุมเวอร์ชัน
 
-- [ ] Using Git and Github for Version Control System
+- [x] Using Git and Github for Version Control System
 
       ใช้ Command Line ในการรันโปรเจกต์
 
-- [ ] Using Comand Line for run project
+- [x] Using Comand Line for run project
 
 ### 1B : Build UI with React Component สร้าง UI ด้วย React Component (20 คะแนน)
 

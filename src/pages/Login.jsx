@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useStore from "../store/myStore";
 
 function Login() {
   const [fillForm, setFillForm] = useState({ email: "", password: "" });
@@ -8,6 +9,12 @@ function Login() {
     msg: "Email or Password is Invalid.",
     isFail: false,
   });
+
+  const { activeUser, setActiveUser } = useStore();
+
+  //   const [loginInfo, setLoginInfo] = useState(
+  //     JSON.parse(localStorage.getItem("loginInfo"))
+  //   );
 
   const navigate = useNavigate();
 
@@ -19,6 +26,7 @@ function Login() {
       if (resp.status == 200) {
         setLoginFail((prev) => ({ ...prev, isFail: false }));
         localStorage.setItem("loginInfo", JSON.stringify(resp.data));
+        setActiveUser(JSON.parse(localStorage.getItem("loginInfo")));
         navigate(`/`);
       } else if (resp.status == 400) {
         setLoginFail((prev) => ({ ...prev, isFail: true }));
@@ -42,7 +50,17 @@ function Login() {
     setFillForm((prev) => ({ ...prev, password: e.target.value }));
   };
 
-  useEffect(() => {}, []);
+  const hdlEnterKey = (e) => {
+    if (e.key === "Enter") {
+      fetchData();
+    }
+  };
+
+  useEffect(() => {
+    if (activeUser) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div className="flex">
       <div className="card bg-base-200 border p-8 mx-auto mt-20">
@@ -63,6 +81,7 @@ function Login() {
               placeholder="Email"
               name="email"
               onChange={hdlEmailInput}
+              onKeyUp={hdlEnterKey}
               value={fillForm.email}
             />
           </label>
@@ -85,6 +104,8 @@ function Login() {
               className="grow"
               name="password"
               onChange={hdlPasswordInput}
+              onKeyUp={hdlEnterKey}
+              value={fillForm.password}
             />
           </label>
           {loginFail.isFail ? (

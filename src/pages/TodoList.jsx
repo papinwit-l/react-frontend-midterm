@@ -2,11 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TodoListDetail from "../components/TodoListDetail";
+import useStore from "../store/myStore";
 
 function TodoList() {
-  const [loginInfo, setLoginInfo] = useState(
-    JSON.parse(localStorage.getItem("loginInfo"))
-  );
+  const { activeUser, setActiveUser } = useStore();
+  //   const [loginInfo, setLoginInfo] = useState(
+  //     JSON.parse(localStorage.getItem("loginInfo"))
+  //   );
   const [todoList, setTodoList] = useState([]);
   const [loadingList, setLoadingList] = useState(true);
   const [text, setText] = useState("");
@@ -17,7 +19,7 @@ function TodoList() {
     let resp;
     try {
       resp = await axios.get(
-        "http://139.5.146.186/api/v1/todo?userId=" + loginInfo.user.userId
+        "http://139.5.146.186/api/v1/todo?userId=" + activeUser.user.userId
       );
       console.log(resp.data);
       setTodoList(resp.data);
@@ -32,7 +34,7 @@ function TodoList() {
     let resp;
     try {
       resp = await axios.post(
-        "http://139.5.146.186/api/v1/todo?userId=" + loginInfo.user.userId,
+        "http://139.5.146.186/api/v1/todo?userId=" + activeUser.user.userId,
         { title: text }
       );
       //   console.log(resp.data);
@@ -54,14 +56,20 @@ function TodoList() {
     }
   };
 
+  const hdlLogout = () => {
+    localStorage.removeItem("loginInfo");
+    setActiveUser(JSON.parse(localStorage.getItem("loginInfo")));
+    // setLoginInfo(JSON.parse(localStorage.getItem("loginInfo")));
+  };
+
   useEffect(() => {
-    if (!loginInfo) {
+    if (!activeUser) {
       navigate("/login");
     }
     // console.log(loginInfo.user.userId);
     fetchList();
     //sss
-  }, [loginInfo]);
+  }, [activeUser]);
 
   return (
     <div className="flex">
@@ -80,6 +88,7 @@ function TodoList() {
             ))
           )}
         </div>
+        <button onClick={hdlLogout}>Logout</button>
       </div>
     </div>
   );
