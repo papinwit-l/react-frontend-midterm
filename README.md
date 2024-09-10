@@ -116,15 +116,15 @@ async function getMe() {
 
       เข้าใจการออกแบบ UI และ Flow ของ UI (Figma)
 
-- [ ] Understand UI Design and UI Flow (Figma)
+- [x] Understand UI Design and UI Flow (Figma)
 
       เขียน UI ที่สะอาดและนำกลับมาใช้ซ้ำได้
 
-- [ ] Write Clean & Reausable UI
+- [x] Write Clean & Reausable UI
 
       ตั้งชื่อ component ให้เหมาะสม
 
-- [ ] Good Naming for Component
+- [x] Good Naming for Component
 
 ### 1C : Precise UI with Design (20pts)
 
@@ -204,23 +204,23 @@ async function getMe() {
 
       ใช้ Context หรือ zustand สำหรับการจัดการสถานะ (20 คะแนน)
 
-- [ ] Using Context or zustand for State Management (20pts)
+- [x] Using Context or zustand for State Management (20pts)
 
       ใช้ React Router สำหรับการ routing (10 คะแนน)
 
-- [ ] Using React Router for Routing (10pts)
+- [x] Using React Router for Routing (10pts)
 
       เพิ่มฟีเจอร์ใหม่หรือ UI ที่น่าทึ่ง (ขึ้นอยู่กับความคิดสร้างสรรค์) (15 คะแนน)
 
-- [ ] New Feature or Amazing UI (Depend on your creativity) (15pts)
+- [x] New Feature or Amazing UI (Depend on your creativity) (15pts)
 
       ป้องกันการเข้าถึงหน้าโดยไม่ได้รับอนุญาต (10 คะแนน)
 
-- [ ] Protect Routed (10pts)
+- [x] Protect Routed (10pts)
 
       การเปลี่ยนหน้าอัตโนมัติ (login logout) (10 คะแนน)
 
-- [ ] Auto Redirect (10 pts)
+- [x] Auto Redirect (10 pts)
 
       ใช้  API v2 หรือ v3 (C.R.U.D.) (20 คะแนน)
 
