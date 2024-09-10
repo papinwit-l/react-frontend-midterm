@@ -42,10 +42,12 @@ function TodoListDetail(props) {
     <div className="flex justify-between">
       {data.status ? (
         <label className="flex-1 line-through" onClick={hdlStatus}>
+          <input type="checkbox" checked={data.status} />
           {data.title}
         </label>
       ) : (
         <label className="flex-1" onClick={hdlStatus}>
+          <input type="checkbox" checked={data.status} />
           {data.title}
         </label>
       )}
