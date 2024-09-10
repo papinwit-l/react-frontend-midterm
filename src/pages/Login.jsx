@@ -28,11 +28,10 @@ function Login() {
         localStorage.setItem("loginInfo", JSON.stringify(resp.data));
         setActiveUser(JSON.parse(localStorage.getItem("loginInfo")));
         navigate(`/`);
-      } else if (resp.status == 400) {
-        setLoginFail((prev) => ({ ...prev, isFail: true }));
       }
     } catch (err) {
       console.log(err);
+      setLoginFail((prev) => ({ ...prev, isFail: true }));
     }
   };
 
