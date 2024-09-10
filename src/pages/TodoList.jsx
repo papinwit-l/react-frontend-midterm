@@ -73,14 +73,21 @@ function TodoList() {
 
   return (
     <div className="flex">
-      <div className="card bg-base-200 mx-auto mt-6 p-6">
-        <label>
+      <div className="card bg-base-200 mx-auto mt-6 p-6 gap-2 select-none">
+        <label className="input input-bordered flex items-center gap-2">
           New Task
-          <input value={text} onChange={inputHdl} onKeyUp={hdlEnter} />
+          <input
+            value={text}
+            onChange={inputHdl}
+            onKeyUp={hdlEnter}
+            type="text"
+            className="grow"
+            placeholder="Task"
+          />
         </label>
-        <div>
+        <div className="flex flex-col">
           {loadingList ? (
-            <p>Loading List...</p>
+            <span className="loading loading-spinner loading-md"></span>
           ) : (
             // <pre>{JSON.stringify(todoList)}</pre>
             todoList.map((el) => (
@@ -88,7 +95,9 @@ function TodoList() {
             ))
           )}
         </div>
-        <button onClick={hdlLogout}>Logout</button>
+        <button className="btn btn-primary" onClick={hdlLogout}>
+          Logout
+        </button>
       </div>
     </div>
   );

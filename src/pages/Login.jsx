@@ -31,7 +31,18 @@ function Login() {
       }
     } catch (err) {
       console.log(err);
-      setLoginFail((prev) => ({ ...prev, isFail: true }));
+      if (err.response.data == "Invalid user credentials")
+        setLoginFail((prev) => ({
+          ...prev,
+          isFail: true,
+          msg: "Email or Password is Invalid.",
+        }));
+      if (err.response.data == "Too many requests")
+        setLoginFail((prev) => ({
+          ...prev,
+          isFail: true,
+          msg: "Server: Too many requests",
+        }));
     }
   };
 
