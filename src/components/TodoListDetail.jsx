@@ -74,7 +74,7 @@ function TodoListDetail(props) {
   };
 
   const hdlCancelEdit = (e) => {
-    e, preventDefault();
+    e.preventDefault();
     setIsEdit(false);
   };
 
@@ -82,12 +82,12 @@ function TodoListDetail(props) {
     setText(e.target.value);
   };
   return (
-    <div className="flex justify-between p-1 border rounded-md border-slate-700">
+    <div className="flex justify-between items-center p-1 gap-1 border rounded-md border-slate-700">
       {isEdit ? (
         <label className={labelStyle}>
           <input
             type="checkbox"
-            checked={data.status}
+            checked={!data.status}
             className={checkboxStyle}
             onClick={hdlStatus}
           />
@@ -102,7 +102,7 @@ function TodoListDetail(props) {
         <label className={labelStyleLine}>
           <input
             type="checkbox"
-            checked={data.status}
+            checked={!data.status}
             className={checkboxStyle}
             onClick={hdlStatus}
           />
@@ -112,7 +112,7 @@ function TodoListDetail(props) {
         <label className={labelStyle}>
           <input
             type="checkbox"
-            checked={data.status}
+            checked={!data.status}
             className={checkboxStyle}
             onClick={hdlStatus}
           />
@@ -123,11 +123,11 @@ function TodoListDetail(props) {
         <a
           href=""
           onClick={hdlCancelEdit}
-          className="pr-2 flex justify-center items-center"
+          className="btn btn-xs btn-warning pr-2 flex justify-center items-center"
         >
           Cancel
         </a>
-      ) : (
+      ) : !data.status ? (
         <a
           href=""
           onClick={hdlEdit}
@@ -135,6 +135,8 @@ function TodoListDetail(props) {
         >
           <i className="fa-solid fa-pen-to-square"></i>
         </a>
+      ) : (
+        <></>
       )}
       <a
         href=""
