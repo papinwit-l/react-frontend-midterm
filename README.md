@@ -130,11 +130,11 @@ async function getMe() {
 
       สร้าง UI ที่ถูกต้อง: หน้า Login
 
-- [ ] Precise UI : Login Page
+- [x] Precise UI : Login Page
 
       สร้าง UI ที่ถูกต้อง: หน้า Todo หรือ movie (My Favorite List)
 
-- [ ] Precise UI : Todo Page or movie (My Favorite List)
+- [x] Precise UI : Todo Page or movie (My Favorite List)
 
 ## Part-2 : Feature and Logic ฟีเจอร์และลอจิก (50 คะแนน)
 
