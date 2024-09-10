@@ -85,12 +85,12 @@ function TodoListDetail(props) {
     <div className="flex justify-between items-center p-1 gap-1 border rounded-md border-slate-700 hover:bg-base-100">
       {isEdit ? (
         <label className={labelStyle}>
-          <input
+          {/* <input
             type="checkbox"
             checked={!data.status}
             className={checkboxStyle}
             onClick={hdlStatus}
-          />
+          /> */}
           <input
             type="text"
             value={text}
